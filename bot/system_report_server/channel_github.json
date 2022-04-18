@@ -1,0 +1,13 @@
+{
+	"id": "963931287758970960",
+	"last_message_id": "964568689737359460",
+	"type": 0,
+	"name": "github",
+	"position": 1,
+	"parent_id": "963931245992099841",
+	"topic": "Github actions will report here",
+	"guild_id": "963931245992099840",
+	"permission_overwrites": [],
+	"rate_limit_per_user": 0,
+	"nsfw": false
+}

@@ -1,0 +1,13 @@
+{
+	"id": "963931245992099843",
+	"last_message_id": "964675724424388669",
+	"type": 0,
+	"name": "general",
+	"position": 0,
+	"parent_id": "963931245992099841",
+	"topic": null,
+	"guild_id": "963931245992099840",
+	"permission_overwrites": [],
+	"rate_limit_per_user": 0,
+	"nsfw": false
+}

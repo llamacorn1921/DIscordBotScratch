@@ -1,0 +1,17 @@
+{
+  "name": "webhooks",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.26.1",
+    "node-fetch": "^3.2.3",
+    "urllib": "^2.38.0",
+    "ws": "^8.5.0"
+  }
+}
