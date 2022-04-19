@@ -1,15 +1,18 @@
-// gateway: wss://gateway.discord.gg
-// wss://gateway.discord.gg/?v=9&encoding=json
-var urllib = require('urllib');
+const DiscordBot = require('./BotClass');
 
-urllib.request('https://discord.com/api/v8/applications/855268197657608213/guilds', {
-	type: 'get',
-	headers: {
-		'Authorization':'Bot ODU1MjY4MTk3NjU3NjA4MjEz.YMwAlA.HaEj0X7OkTRl40eYLlM9rj8yFUE',
-	}
-}).then(function (result) {
-  // result: {data: buffer, res: response object}
-  console.log('status: %s, body size: %d, headers: %j', result.res.statusCode, result.data.length, result.res.headers);
-}).catch(function (err) {
-  console.error(err);
+const config = require('./config.json');
+
+const timestamp = new Date();
+const bot = new DiscordBot(37655);
+
+bot.on('ready', (data) => {
+	console.log(`[${timestamp.toLocaleDateString("en-US", { hour: "2-digit", minute: "2-digit", second: "2-digit" })}] Bot is now online! Session ID: ${data.session_id}`)
 });
+
+bot.on('message', (data) => {
+	// console.log(data);
+	// console.log(bot.guild(963931245992099840).name);
+})
+
+
+bot.login(config.token);

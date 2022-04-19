@@ -1,26 +1,4 @@
 {
-	"discord": {
-		"base": "https://discord.com/api",
-		"url": "https://discord.com/api/webhooks/964635844185059339/BS3eBlBrF2fVQkWFqw9hi0pEOWX4rwqZynDvvHuqVes-7jzkFf6Wx3YPRQZtw1bpmm6S",
-		"id": 964635844185059339,
-		"token": "BS3eBlBrF2fVQkWFqw9hi0pEOWX4rwqZynDvvHuqVes-7jzkFf6Wx3YPRQZtw1bpmm6S",
-		"userID": 452196539230715904,
-		"app":{
-			"urlBase": "https://discord.com/api/v8/applications/964644822285713499",
-			"clientID": 964644822285713499,
-			"pubKey": "4bc815aa63754f020e899e2d33913be6aaa3db62574e2d0c3ffcbc0d5c9a02fa"
-		},
-		"bot":{
-			"urlBase": "https://discord.com/api/v8/applications/964644822285713499",
-			"id": 855268197657608213,
-			"pubKey": "45d444daa76c7d2a9c4948da1bbb58a5a96d18fc28c1ffd20f9665d698951ba7",
-			"token": "ODU1MjY4MTk3NjU3NjA4MjEz.YMwAlA.HaEj0X7OkTRl40eYLlM9rj8yFUE",
-			"secret":"L7OIU20z6WO5pVXcvHZwi9pEXp8XoeW7"
-		},
-		"server": {
-			"id": 963931245992099840,
-			"jsonAPI": "https://discord.com/api/guilds/963931245992099840/widget.json"
-		}
-
-	}
+	"token": "ODU1MjY4MTk3NjU3NjA4MjEz.YMwAlA.vBARrLcLpVvgl67s8e2bnljCjIs",
+	"ID": 855268197657608213
 }

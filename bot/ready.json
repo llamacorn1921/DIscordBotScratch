@@ -1,0 +1,37 @@
+{
+	"t": "READY",
+	"s": 1,
+	"op": 0,
+	"d": {
+		"v": 9,
+		"user_settings": {},
+		"user": {
+			"verified": true,
+			"username": "Llama-Bot",
+			"mfa_enabled": false,
+			"id": "855268197657608213",
+			"flags": 0,
+			"email": null,
+			"discriminator": "4938",
+			"bot": true,
+			"avatar": null
+		},
+		"session_id": "30f483e395c47a5e013b5803684009b5",
+		"relationships": [],
+		"private_channels": [],
+		"presences": [],
+		"guilds": [
+			{ "unavailable": true, "id": "856008541428645929" },
+			{ "unavailable": true, "id": "963931245992099840" }
+		],
+		"guild_join_requests": [],
+		"geo_ordered_rtc_regions": [
+			"atlanta",
+			"us-central",
+			"us-east",
+			"newark",
+			"us-south"
+		],
+		"application": { "id": "855268197657608213", "flags": 827392 }
+	}
+}

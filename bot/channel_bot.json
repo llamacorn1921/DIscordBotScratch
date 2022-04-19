@@ -1,0 +1,22 @@
+{
+	"id": "855268197657608213",
+	"name": "Llama-Bot",
+	"icon": null,
+	"description": "",
+	"summary": "",
+	"type": null,
+	"hook": true,
+	"bot_public": false,
+	"bot_require_code_grant": false,
+	"verify_key": "45d444daa76c7d2a9c4948da1bbb58a5a96d18fc28c1ffd20f9665d698951ba7",
+	"owner": {
+		"id": "452196539230715904",
+		"username": "llamacorn",
+		"avatar": "932f6a016884f2efdd97dcfca42eedd7",
+		"discriminator": "0627",
+		"public_flags": 0,
+		"flags": 0
+	},
+	"flags": 565248,
+	"team": null
+}
