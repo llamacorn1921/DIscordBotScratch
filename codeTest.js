@@ -1,3 +1,0 @@
-let guilds = [];
-
-guilds.len
