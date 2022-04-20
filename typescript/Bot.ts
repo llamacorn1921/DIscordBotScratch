@@ -37,25 +37,67 @@ class BotBase extends EventEmitter {
 			};
 
 			switch (_data.op) {
-				case 10: {
-					// connection
-					this.info.heartBeat = _data.d.heartbeat_interval;
+				case 10:
+					{
+						// connection
+						this.info.heartBeat = _data.d.heartbeat_interval;
+						this.log(
+							"Connection",
+							"Connected to server, sending auth..."
+						);
+						this.send(
+							2,
+							JSON.stringify({
+								token: this.token,
+								intents: this.intents,
+							})
+						);
+					}
+					break;
+				case 11:
+					{
+						this.debug("connection", "got heartbeat");
+					}
+					break;
+				case 0: {
+					switch (String(_data.t).toLowerCase()()) {
+						case "ready":
+							{
+								this.log(
+									"connection",
+									"auth sent and accpeted, starting heartbeat, and bot is online"
+								);
+								this.heartbeat();
+								this.eventReady(this.payload.data);
+							}
+							break;
+						case "message_create": {
+							this.eventMessage(this.payload.data);
+						}
+						default:
+							break;
+					}
 				}
 			}
 		};
 	}
-
-
-    /** start the bots 'heart' */
-    heartbeat () {
-        setInterval(() => {
-            this.debug = ('Connection', 'Sending heartbeat', null, false);
-        }))
-    }
-    /** send data to server
-     * @param {number} code - the OP code to use
-     * @param {object} data - the data to send
-     */
+	eventReady(data) {
+		this.emit("ready", data);
+	}
+	eventMessage(data) {
+		this.emit("message", data);
+	}
+	/** start the bots 'heart' */
+	heartbeat() {
+		setInterval(() => {
+			this.debug = ("Connection", "Sending heartbeat");
+			this.send(1, this.info.sequnce);
+		}, this.info.heartBeat);
+	}
+	/** send data to server
+	 * @param {number} code - the OP code to use
+	 * @param {object} data - the data to send
+	 */
 	send(code, data) {
 		this.server.send(
 			JSON.stringify({
@@ -65,7 +107,7 @@ class BotBase extends EventEmitter {
 		),
 			(err) => {
 				if (err) {
-                    this.debug = ("Data Send", err.message);
+					this.debug = ("Data Send", err.message);
 				}
 			};
 	}
@@ -88,7 +130,7 @@ class BotBase extends EventEmitter {
 		label: string,
 		content: string,
 		line: number = null,
-        exit: boolean = false;
+		exit: boolean = false
 	) {
 		if (this.bug) this.log(`${line} | ${label}`, content, true);
 		if (exit) process.exit();
@@ -109,4 +151,18 @@ function timestamp(bool: boolean) {
 	} else {
 		return "=== ===";
 	}
+}
+
+
+class Bot extends BotBase {
+    constructor (intents, debug = false) {
+        super();
+        this.intents = intents;
+        this.bug = debug;
+    }
+
+    /** log bot in */
+    login (t: 'token') {
+        this.token = t
+    }
 }
