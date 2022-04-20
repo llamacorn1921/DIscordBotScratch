@@ -6,7 +6,7 @@ class Bot extends BotBase {
 	constructor(intents, debug = false) {
 		super();
 		this.intents = intents;
-		this.fed = debug;
+		this.bug = debug;
 	
 	}
 }

@@ -1,6 +1,8 @@
 const { WebSocket } = require("ws");
 const EventEmitter = require("events");
 
+
+
 /** the base of the bot */
 class BotBase extends EventEmitter {
 	/**BASE: The bots intents
@@ -9,7 +11,7 @@ class BotBase extends EventEmitter {
 	/**BASE: the server to connect to */
 	server;
 	/**BASE: debug information if true */
-	fed;
+	bug;
 	/**BASE: bot info
 	 * @type {{session_id: number, heartBeat: number, sequnce: number}}
 	 */
