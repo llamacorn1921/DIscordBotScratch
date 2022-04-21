@@ -3,15 +3,15 @@ class BotBase extends EventEmitter {
 	/** BASE: intents for the bot */
 	intents: number;
 	/** BASE: the server that the bot connects to */
-	server: WebSocket;
+	private server: WebSocket;
 	/** BASE: value to decide if debug info should show */
 	bug: boolean;
 	/** BASE: bot info */
-	info: { session_id: number; heartBeat: number; sequnce: number };
+	private info: { session_id: number; heartBeat: number; sequnce: number };
 	/** BASE: the payload for each event/message */
 	payload: { op: number; event: string; data: object };
 	/** BASE: the bots token */
-	token: string;
+	private token: string;
 
 	constructor() {
 		super();
